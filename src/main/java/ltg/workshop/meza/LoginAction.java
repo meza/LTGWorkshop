@@ -2,6 +2,7 @@ package ltg.workshop.meza;
 
 import ltg.workshop.meza.actions.UIAction;
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
@@ -19,13 +20,17 @@ public class LoginAction implements UIAction {
 	@Override
 	public void execute() {
 		driver.get("http://www.twitter.com");
-		WebElement usernameField = driver.findElement(By.id("signin-email"));
-		WebElement passwordField = driver.findElement(By.id("signin-password"));
-		WebElement button = driver.findElement(By.cssSelector("button.submit:nth-child(1)"));
+		try {
+			WebElement usernameField = driver.findElement(By.id("signin-email"));
+			WebElement passwordField = driver.findElement(By.id("signin-password"));
+			WebElement button = driver.findElement(By.cssSelector("button.submit:nth-child(1)"));
 
-		usernameField.sendKeys(username);
-		passwordField.sendKeys(password);
-		button.click();
+			usernameField.sendKeys(username);
+			passwordField.sendKeys(password);
+			button.click();
+		} catch (NoSuchElementException e) {
+			return;
+		}
 
 	}
 
