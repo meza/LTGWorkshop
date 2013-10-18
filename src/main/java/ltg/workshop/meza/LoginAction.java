@@ -28,6 +28,7 @@ public class LoginAction implements UIAction {
 			usernameField.sendKeys(username);
 			passwordField.sendKeys(password);
 			button.click();
+			return;
 		} catch (NoSuchElementException e) {
 			return;
 		}
