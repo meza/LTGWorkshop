@@ -7,6 +7,7 @@ import hu.meza.aao.DefaultScenarioContext;
 import hu.meza.aao.ScenarioContext;
 import ltg.workshop.meza.actions.ReadDirectMessagesAction;
 import ltg.workshop.meza.actions.SendDirectMessageAction;
+import ltg.workshop.meza.actions.UIAction;
 import org.junit.Assert;
 
 import java.util.Map;
@@ -20,7 +21,18 @@ public class MessagingSteps {
 	public MessagingSteps(ActorManager actorManager, DefaultScenarioContext context) {
 		this.actorManager = actorManager;
 		this.context = context;
+		this.actorManager.addContext(this.context);
 	}
+
+	@When("^(.*) does the same$")
+	public void xxx(String actor1Label) {
+		User user1 = (User) actorManager.getActor(actor1Label);
+
+		UIAction action = (UIAction) context.getLastAction();
+		user1.execute(action);
+
+	}
+
 
 	@When("^(.*) sends a DM to (.*)$")
 	public void sendsDirectMessageTo(String actor1Label, String actor2Label) {
@@ -40,7 +52,6 @@ public class MessagingSteps {
 	@Then("^(.*) should see (.*)’s message$")
 	public void shouldSeeMessage(String actor1Label, String actor2Label) {
 		User user1 = (User) actorManager.getActor(actor1Label);
-		User user2 = (User) actorManager.getActor(actor2Label);
 
 		DirectMessage message = context.getSubject();
 
@@ -66,4 +77,5 @@ public class MessagingSteps {
 		return message;
 
 	}
+
 }

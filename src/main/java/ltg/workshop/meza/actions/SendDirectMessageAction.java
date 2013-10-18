@@ -47,7 +47,7 @@ public class SendDirectMessageAction implements UIAction {
 	}
 
 	@Override
-	public <T> T copyOf() {
-		return null;  //To change body of implemented methods use File | Settings | File Templates.
+	public SendDirectMessageAction copyOf() {
+		return new SendDirectMessageAction(message, recipientUsername);
 	}
 }

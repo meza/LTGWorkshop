@@ -31,7 +31,7 @@ public class FollowAction implements UIAction {
 	}
 
 	@Override
-	public <T> T copyOf() {
-		return null;  //To change body of implemented methods use File | Settings | File Templates.
+	public FollowAction copyOf() {
+		return new FollowAction(username);
 	}
 }
