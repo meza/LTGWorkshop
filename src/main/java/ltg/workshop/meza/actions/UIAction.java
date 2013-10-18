@@ -5,6 +5,6 @@ import org.openqa.selenium.WebDriver;
 
 public interface UIAction extends Action {
 
-	public void useDriver(WebDriver driver);
+	void useDriver(WebDriver driver);
 
 }

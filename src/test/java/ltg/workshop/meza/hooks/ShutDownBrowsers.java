@@ -7,7 +7,7 @@ import ltg.workshop.meza.User;
 
 public class ShutDownBrowsers {
 
-	ActorManager actorManager;
+	private ActorManager actorManager;
 
 	public ShutDownBrowsers(ActorManager actorManager) {
 		this.actorManager = actorManager;

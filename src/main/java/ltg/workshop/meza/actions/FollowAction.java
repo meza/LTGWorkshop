@@ -5,7 +5,7 @@ import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-public class FollowAction implements UIAction{
+public class FollowAction implements UIAction {
 	private final String username;
 	private WebDriver driver;
 
@@ -29,8 +29,6 @@ public class FollowAction implements UIAction{
 			return;
 		}
 	}
-
-
 
 	@Override
 	public <T> T copyOf() {

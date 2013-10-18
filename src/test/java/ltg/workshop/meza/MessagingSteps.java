@@ -10,6 +10,7 @@ import ltg.workshop.meza.actions.SendDirectMessageAction;
 import org.junit.Assert;
 
 import java.util.Map;
+import java.util.UUID;
 
 public class MessagingSteps {
 
@@ -59,7 +60,7 @@ public class MessagingSteps {
 
 	private String getRandomMessage() {
 		String prefix = "Random message";
-		String time = String.valueOf(System.currentTimeMillis());
+		String time = UUID.randomUUID().toString();
 
 		String message = String.format("%s %s", prefix, time);
 		return message;

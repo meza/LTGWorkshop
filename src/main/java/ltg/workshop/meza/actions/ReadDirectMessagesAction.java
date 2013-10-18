@@ -11,7 +11,7 @@ import java.util.Map;
 public class ReadDirectMessagesAction implements UIAction {
 	private WebDriver driver;
 
-	private HashMap<String, String> messagesReceived = new HashMap<String, String>();
+	private Map<String, String> messagesReceived = new HashMap<String, String>();
 
 	@Override
 	public void useDriver(WebDriver driver) {

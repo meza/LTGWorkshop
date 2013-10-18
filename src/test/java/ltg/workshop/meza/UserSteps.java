@@ -5,7 +5,7 @@ import hu.meza.aao.ActorManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-import java.util.ArrayList;
+import java.util.List;
 
 public class UserSteps {
 
@@ -18,7 +18,7 @@ public class UserSteps {
 	}
 
 	@Given("^(.*) are on twitter$")
-	public void areOnTwitter(ArrayList<String> actors) {
+	public void areOnTwitter(List<String> actors) {
 
 		for (String actor : actors) {
 
