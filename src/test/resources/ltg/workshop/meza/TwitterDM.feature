@@ -6,6 +6,7 @@ Feature: As a twitter user
   Scenario: Sending DM to a follower
     Given Joe, Julie are on twitter
     And Julie is a follower of Joe
+    And Joe is a follower of Julie
     When Joe sends a DM to Julie
     Then Julie should see Joe’s message
 
