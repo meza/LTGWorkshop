@@ -30,6 +30,10 @@ public class UserSteps {
 
 			actorManager.addActor(actor, twitterUser);
 
+			LoginAction login = new LoginAction(username, password);
+
+			twitterUser.execute(login);
+
 		}
 
 	}
