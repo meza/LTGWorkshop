@@ -33,4 +33,10 @@ public class User extends Actor {
 		super.execute(action);
 	}
 
+	public void killBrowser() {
+		if (driver != null) {
+			driver.close();
+			driver.quit();
+		}
+	}
 }
