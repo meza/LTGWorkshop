@@ -14,7 +14,7 @@
         <maven-checkstyle-plugin.version>2.10</maven-checkstyle-plugin.version>
         <cucumber.version>LATEST</cucumber.version>
         <selenium.version>2.35.0</selenium.version>
-        <logback.version>LATEST</logback.version>
+        <logback.version>1.2.0</logback.version>
         <slf4j.version>LATEST</slf4j.version>
         <aao.version>LATEST</aao.version>
         <conifg.version>LATEST</conifg.version>
